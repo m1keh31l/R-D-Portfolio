@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D | Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0f0f11',
+                            card: '#18181c',
+                            border: '#26262e'
+                        },
+                        accent: {
+                            pink: '#ff2a5f',
+                            glow: 'rgba(255, 42, 95, 0.25)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Anton', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f0f11;
+            color: #e4e4e7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Clean neon accent border */
+        .card-border {
+            border: 1px solid #26262e;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+        .card-border:hover {
+            border-color: #ff2a5f;
+            transform: translateY(-2px);
+        }
+
+        /* Simple button styling */
+        .btn-accent {
+            background-color: #ff2a5f;
+            color: #ffffff;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+        .btn-accent:hover {
+            background-color: #e01b4c;
+            box-shadow: 0 0 15px rgba(255, 42, 95, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-accent-pink selection:text-white">
+
+    <!-- NAVIGATION HEADER -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-dark-bg/90 border-b border-dark-border backdrop-blur-md px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 font-heading text-2xl tracking-wider text-white hover:text-accent-pink transition">
+                <i class="fa-solid fa-code text-accent-pink"></i>
+                R&D PORTFOLIO
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-mono text-xs text-gray-400 font-semibold tracking-wider">
+                <a href="#home" class="hover:text-accent-pink transition">HOME</a>
+                <a href="#about" class="hover:text-accent-pink transition">ABOUT</a>
+                <a href="#stats" class="hover:text-accent-pink transition">PERSONAL INFORMATIONS</a>
+                <a href="#certs" class="hover:text-accent-pink transition">CERTS</a>
+                <a href="#contact" class="hover:text-accent-pink transition">CONTACT</a>
+            </nav>
+
+            <a href="#contact" class="btn-accent px-5 py-2 text-xs uppercase tracking-wider rounded">
+                Hire Us
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 space-y-24">
+
+        <!-- HERO SECTION -->
+        <section id="home" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pt-8">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="inline-block px-3 py-1 bg-accent-pink/10 border border-accent-pink/30 text-accent-pink font-mono text-xs font-bold rounded">
+                    WE ARE ASPIRING IT STUDENTS!
+                </span>
+
+                <h1 class="text-5xl sm:text-7xl font-heading text-white tracking-tight uppercase leading-none">
+                    R&D <span class="text-accent-pink">PORTFOLIO</span>
+                </h1>
+
+                <p class="text-gray-400 text-base leading-relaxed max-w-xl">
+                    We are aspiring Information Technology students driven by a passion for building functional, clean, and purposeful digital solutions. Focused on mastering the fundamentals of software engineering, minimalist web design, and system architecture, we bridge the gap between classroom theory and real-world execution—one line of code at a time.
+                </p>
+
+                <div class="flex items-center gap-4 pt-2">
+                    <a href="#contact" class="btn-accent px-6 py-3 text-xs uppercase tracking-wider rounded font-mono">
+                        Get In Touch
+                    </a>
+                    <a href="#stats" class="px-6 py-3 border border-dark-border text-white text-xs font-mono rounded hover:border-accent-pink transition">
+                        View Our Team
+                    </a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex items-center gap-4 pt-4">
+                    <a href="#" class="w-10 h-10 rounded bg-dark-card border border-dark-border flex items-center justify-center text-gray-400 hover:text-accent-pink hover:border-accent-pink transition">
+                        <i class="fa-brands fa-github text-base"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded bg-dark-card border border-dark-border flex items-center justify-center text-gray-400 hover:text-accent-pink hover:border-accent-pink transition">
+                        <i class="fa-brands fa-youtube text-base"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded bg-dark-card border border-dark-border flex items-center justify-center text-gray-400 hover:text-accent-pink hover:border-accent-pink transition">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- R&D TEAM IMAGE CARD -->
+<div class="lg:col-span-5 flex justify-center">
+    <div class="relative w-full max-w-sm rounded-xl overflow-hidden bg-dark-card border border-dark-border">
+
+        <img src="Neon R&D Coding Studio.png"
+             alt="R&D Technology Workspace"
+             class="w-full h-106 object-cover object-center">
+
+        <div class="p-5 bg-dark-card border-t border-dark-border">
+
+            <div class="flex items-center justify-between mb-3">
+                <p class="font-mono text-xs text-accent-pink font-bold">
+                    R&D / OUR PHILOSOPHY
+                </p>
+
+                <span class="text-xs text-green-400 font-mono">
+                    ● IN DEVELOPMENT
+                </span>
+            </div>
+
+            <p class="text-sm text-gray-300 leading-relaxed italic">
+                "We may still be learning, but every line of code
+                brings us one step closer to building something meaningful."
+            </p>
+
+            <p class="font-mono text-xs text-gray-500 mt-4">
+                — MICHAEL & FAME
+            </p>
+
+        </div>
+    </div>
+</div>
+
+    </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="space-y-6">
+            <div class="border-l-4 border-accent-pink pl-4">
+                <span class="font-mono text-xs text-accent-pink font-bold tracking-widest uppercase">Overview</span>
+                <h2 class="text-3xl sm:text-4xl font-heading text-white uppercase">About R&D PORTFOLIO</h2>
+            </div>
+            
+            <div class="bg-dark-card p-6 sm:p-8 rounded-xl border border-dark-border space-y-4">
+                <p class="text-gray-300 leading-relaxed text-sm">
+    Technology evolves fast, but a solid foundation lasts. Our goal is to bridge the gap between academic theory and practical execution—transforming raw ideas into clean, functional, and purposeful digital experiences.
+</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 font-mono text-xs">
+                    <div class="p-3 bg-dark-bg rounded border border-dark-border">
+                        <span class="text-gray-500 block">FOCUS</span>
+                        <span class="text-white font-bold">Frontend / Full Stack</span>
+                    </div>
+                    <div class="p-3 bg-dark-bg rounded border border-dark-border">
+                        <span class="text-gray-500 block">METHODOLOGY</span>
+                        <span class="text-white font-bold">Relentless Execution</span>
+                    </div>
+                    <div class="p-3 bg-dark-bg rounded border border-dark-border">
+                        <span class="text-gray-500 block">MAIN STACK</span>
+                        <span class="text-white font-bold">React, Node, Tailwind</span>
+                    </div>
+                    <div class="p-3 bg-dark-bg rounded border border-dark-border">
+                        <span class="text-gray-500 block">AVAILABILITY</span>
+                        <span class="text-accent-pink font-bold">Open For Client Work</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAL INFORMATION SECTION -->
+<section id="stats" class="space-y-6">
+
+    <div class="border-l-4 border-accent-pink pl-4">
+        <span class="font-mono text-xs text-accent-pink font-bold tracking-widest uppercase">
+            Our Team
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading text-white uppercase">
+            TEAM
+        </h2>
+        <p class="text-sm text-gray-400 mt-2">
+            Meet the aspiring IT professionals behind R&D Portfolio.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- MICHAEL REY MAN ROSLINDA -->
+        <div class="bg-dark-card p-6 rounded-xl card-border space-y-5">
+
+            <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-accent-pink font-bold">
+                    TEAM MEMBER 01
+                </span>
+                <span class="text-xs text-green-400 font-mono">
+                    ● AVAILABLE
+                </span>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-heading text-white uppercase">
+                    Michael Rey Man Roslinda
+                </h3>
+                <p class="text-sm text-accent-pink mt-1">
+                    Aspiring IT Professional
+                </p>
+            </div>
+
+            <div class="space-y-3 text-sm">
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Education</span>
+                    <span class="text-white text-right">BS Information Technology</span>
+                </div>
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Academic Level</span>
+                    <span class="text-white">2nd Year College</span>
+                </div>
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Specialization</span>
+                    <span class="text-white">Web Development</span>
+                </div>
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Experience</span>
+                    <span class="text-white">Academic Projects</span>
+                </div>
+
+            </div>
+
+            <div>
+                <p class="font-mono text-xs text-gray-400 mb-3">
+                    TECHNICAL SKILLS
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">HTML</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">CSS</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">JavaScript</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">Tailwind CSS</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">Problem Solving</span>
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded border border-dark-border">
+                <p class="font-mono text-xs text-accent-pink mb-2">
+                    CAREER OBJECTIVE
+                </p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    To develop my technical knowledge and practical skills
+                    in Information Technology while gaining experience
+                    in creating useful and reliable digital solutions.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- FAME IVAN DOBLAS -->
+        <div class="bg-dark-card p-6 rounded-xl card-border space-y-5">
+
+            <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-accent-pink font-bold">
+                    TEAM MEMBER 02
+                </span>
+                <span class="text-xs text-green-400 font-mono">
+                    ● AVAILABLE
+                </span>
+            </div>
+
+            <div>
+                <h3 class="text-2xl font-heading text-white uppercase">
+                    Fame Ivan Doblas
+                </h3>
+                <p class="text-sm text-accent-pink mt-1">
+                    Aspiring IT Professional
+                </p>
+            </div>
+
+            <div class="space-y-3 text-sm">
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Education</span>
+                    <span class="text-white text-right">BS Information Technology</span>
+                </div>
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Academic Level</span>
+                    <span class="text-white">2nd Year College</span>
+                </div>
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Specialization</span>
+                    <span class="text-white">Game Development</span>
+                </div>
+
+                <div class="flex justify-between border-b border-dark-border pb-2">
+                    <span class="text-gray-500">Experience</span>
+                    <span class="text-white">Academic Projects</span>
+                </div>
+
+            </div>
+
+            <div>
+                <p class="font-mono text-xs text-gray-400 mb-3">
+                    TECHNICAL SKILLS
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">HTML</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">CSS</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">JavaScript</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">Teamwork</span>
+                    <span class="px-3 py-1 bg-dark-bg border border-dark-border rounded text-xs text-white">Problem Solving</span>
+                </div>
+            </div>
+
+            <div class="bg-dark-bg p-4 rounded border border-dark-border">
+                <p class="font-mono text-xs text-accent-pink mb-2">
+                    CAREER OBJECTIVE
+                </p>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    To improve technical abilities, gain practical
+                    experience, and contribute to developing innovative
+                    and effective technology-based solutions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- CERTIFICATES / ACHIEVEMENTS -->
+        <section id="certs" class="space-y-6">
+            <div class="border-l-4 border-accent-pink pl-4">
+                <span class="font-mono text-xs text-accent-pink font-bold tracking-widest uppercase">Qualifications</span>
+                <h2 class="text-3xl sm:text-4xl font-heading text-white uppercase">Certifications & Achievements</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-dark-card p-6 rounded-xl card-border space-y-3">
+                    <div class="flex justify-between items-center font-mono text-xs text-accent-pink">
+                        <span>CERTIFIED</span>
+                        <span>2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Full Stack Engineering</h3>
+                    <p class="text-xs text-gray-400">Advanced React, Node.js API systems, and performance optimization.</p>
+                </div>
+
+                <div class="bg-dark-card p-6 rounded-xl card-border space-y-3">
+                    <div class="flex justify-between items-center font-mono text-xs text-accent-pink">
+                        <span>CERTIFIED</span>
+                        <span>2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Modern UI/UX Architecture</h3>
+                    <p class="text-xs text-gray-400">Responsive layouts, clean CSS/Tailwind structure, and accessible components.</p>
+                </div>
+
+                <div class="bg-dark-card p-6 rounded-xl card-border space-y-3">
+                    <div class="flex justify-between items-center font-mono text-xs text-accent-pink">
+                        <span>HONOR</span>
+                        <span>DAILY</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">100% Work Discipline</h3>
+                    <p class="text-xs text-gray-400">Sam Sulek-style daily execution. High output, high accuracy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="bg-dark-card p-8 rounded-xl border border-dark-border max-w-2xl mx-auto space-y-6">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-heading text-white uppercase">Start A Project</h2>
+                <p class="text-xs font-mono text-gray-400">Send a message to discuss development work or collaborations.</p>
+            </div>
+
+            <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block font-mono text-xs text-gray-400 mb-1">YOUR NAME</label>
+                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white text-sm rounded focus:border-accent-pink focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs text-gray-400 mb-1">YOUR EMAIL</label>
+                    <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white text-sm rounded focus:border-accent-pink focus:outline-none">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs text-gray-400 mb-1">MESSAGE</label>
+                    <textarea rows="4" required placeholder="Tell me about your project..." class="w-full px-4 py-3 bg-dark-bg border border-dark-border text-white text-sm rounded focus:border-accent-pink focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="btn-accent w-full py-3 text-xs uppercase tracking-wider rounded font-mono">
+                    Send Message
+                </button>
+            </form>
+
+            <div id="formAlert" class="hidden p-3 bg-accent-pink/10 border border-accent-pink text-accent-pink font-mono text-xs text-center rounded">
+                Message sent successfully! We'll get back to you soon.
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-dark-border py-6 text-center text-xs font-mono text-gray-500">
+        <p>© 2026 R&D. Built clean & simple.</p>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').reset();
+            const alert = document.getElementById('formAlert');
+            alert.classList.remove('hidden');
+            setTimeout(() => {
+                alert.classList.add('hidden');
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
